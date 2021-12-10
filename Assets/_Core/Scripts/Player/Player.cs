@@ -9,12 +9,14 @@ public class Player : MonoBehaviour
     public Sprite spriteDamage;
     public Animator animator;
     public GameObject gun;
+    public GameObject bombGun;
     private const int MAX_LIFES=3;
     
     public int lifes=3;
     public void ResetPlayer(){
         lifes = MAX_LIFES;
         gun.gameObject.SetActive(false);
+        bombGun.gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == GameConstants.TAG_ENEMY  )

@@ -125,8 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 6864274321034625766}
   particulas: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
-  speed: 40
-  speedY: 30
+  speed: 10
+  speedY: 10
 --- !u!50 &6864274321034625766
 Rigidbody2D:
   serializedVersion: 4

@@ -36,9 +36,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (moveBlock){return;}
         // Debug.Log("Player Movement - Update");
-        Move();
+        //Move();
         Jump();
         Flip();
+        MoveKey();
         animator.SetFloat("Speed",Mathf.Abs(horizontalVal));
     }
 
@@ -82,6 +83,10 @@ public class PlayerMovement : MonoBehaviour
         // Debug.Log(Input.GetAxisRaw("Horizontal"));
         // horizontalVal = Input.GetAxisRaw("Horizontal");
         horizontalVal=joystick.Horizontal;
+        rigidbody2D.velocity = new Vector2(horizontalVal * speed, rigidbody2D.velocity.y);
+    }
+    public void MoveKey(){
+        horizontalVal = Input.GetAxisRaw("Horizontal");
         rigidbody2D.velocity = new Vector2(horizontalVal * speed, rigidbody2D.velocity.y);
     }
 }

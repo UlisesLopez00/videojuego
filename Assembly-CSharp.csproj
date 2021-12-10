@@ -37,11 +37,16 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\_Core\Scripts\Level\CoinJump.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+     <Compile Include="Assets\_Core\Scripts\Level\LifeJump.cs" />
      <Compile Include="Assets\_Core\Scripts\UI\PauseMenu.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\Coin.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\Chest.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\_Core\Scripts\Audio\AudioManager.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\Door.cs" />
@@ -50,6 +55,8 @@
      <Compile Include="Assets\_Core\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\Trampoline.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+     <Compile Include="Assets\_Core\Scripts\Level\BombGunLoot.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\Life.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
      <Compile Include="Assets\_Core\Scripts\Player\PlayerGun.cs" />
@@ -59,11 +66,13 @@
      <Compile Include="Assets\_Core\Scripts\Level\GunLoot.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\LifeLootItem.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\_Core\Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
      <Compile Include="Assets\_Core\Scripts\Enemies\Move_Enemy.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\Level_Setup.cs" />
      <Compile Include="Assets\_Core\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\Bomb.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
@@ -71,13 +80,6 @@
      <Compile Include="Assets\_Core\Scripts\Player\GroundCheck.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\KeyOn.cs" />
      <Compile Include="Assets\_Core\Scripts\Level\Key.cs" />
-     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
-     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
-     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\_Core\Art\Platform_2D_Assets\Extra animations and enemies\Spritesheets\alienBlue.xml" />
      <None Include="Assets\_Core\Art\Platform_2D_Assets\Base pack\Player\p2_spritesheet.txt" />

@@ -7,11 +7,12 @@ TagManager:
   - Ground
   - Enemy
   - Bullet
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Items
   - Water
   - UI
   - 
@@ -49,6 +50,9 @@ TagManager:
     locked: 0
   - name: Back
     uniqueID: 3534362037
+    locked: 0
+  - name: Item
+    uniqueID: 1312195631
     locked: 0
   - name: Front
     uniqueID: 673328997

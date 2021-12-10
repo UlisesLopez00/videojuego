@@ -18,6 +18,13 @@ public class LevelManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject lootUI;
     public KeyOn key;
+    public PlayerGun pg;
+
+    void Start(){
+        levelLoadingMenu.gameObject.SetActive(true);
+        SceneManager.LoadScene("Level_"+currentLevel,LoadSceneMode.Additive);
+    }
+    
     
     public void ResetGame(){
         player.ResetPlayer();
@@ -54,6 +61,7 @@ public class LevelManager : MonoBehaviour
        Invoke("OnLevelCompleteDelay",1);
     }
     public void OnLevelCompleteDelay(){
+        AudioManager.Ins.PlaySound(GameConstants.AUDIO_LEVEL_COMPLETE);
         levelCompleteMenu.gameObject.SetActive(true);
     }
 
@@ -76,19 +84,18 @@ public class LevelManager : MonoBehaviour
         if(_lifes<0){return;}
         currentLifes --;
         player.lifes=currentLifes;
-        Debug.Log("vida menos"+currentLifes);
         lifeList[currentLifes].ApagarVida();
     }
 
     public void AddLife(int _life){
         if (_life<0 || _life>3){return;}
-        Debug.Log(_life);
         lifeList[_life].PrenderVida();
         currentLifes++;
         player.lifes=currentLifes;
-        Debug.Log("se añade vida"+currentLifes);
     }
 
+
+    
      public void OnKeyTaked(){
         key.KeyTaked();
     }
@@ -115,6 +122,8 @@ public class LevelManager : MonoBehaviour
         SceneManager.UnloadSceneAsync("Level_"+currentLevel);
 
         currentLevel=_level;
+        player.bombGun.gameObject.SetActive(false);
+        player.gun.gameObject.SetActive(false);
 
         key.KeyOff();
         

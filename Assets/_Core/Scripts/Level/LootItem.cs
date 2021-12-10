@@ -28,14 +28,26 @@ public class LootItem : MonoBehaviour
     void Update() {
         if(!isActive){return;}
         if(isLooted){return;}
+        Collect();
+    }
+    public void Collect(){
         if (Input.GetKeyDown(KeyCode.E)){
-            GiveLoot();
+           DoCollect();
+        }
+    }
+    public void DoCollect(){
+         GiveLoot();
             isLooted=true;
             LevelManager.Ins.lootUI.gameObject.SetActive(false);
             if (removeAfterLoot)
             {
                 gameObject.SetActive(false);
             }
-        }
+    }
+    public void OnClickCollect(){
+        DoCollect();
+    }
+    public void Dar(){
+        
     }
 }
